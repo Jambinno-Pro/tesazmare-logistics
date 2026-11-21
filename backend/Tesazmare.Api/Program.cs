@@ -69,17 +69,24 @@ builder.Services
 builder.Services.AddAuthorization();
 
 // CORS
+
+// CORS
+var allowedOrigins = builder.Configuration["Cors:AllowedOrigins"]?
+    .Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
+    ?? ["http://localhost:3000"];
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("NextJsFrontend", policy =>
     {
         policy
-            .WithOrigins("http://localhost:3000")
+            .WithOrigins(allowedOrigins)
             .AllowAnyHeader()
             .AllowAnyMethod()
             .AllowCredentials();
     });
 });
+
 
 var app = builder.Build();
 
