@@ -1,0 +1,467 @@
+/* ==========================================
+   TESAZMARE LOGIN PAGE
+========================================== */
+
+.tes-login,
+.tes-login * {
+  box-sizing: border-box;
+}
+
+.tes-login {
+  --tes-navy: #172b45;
+  --tes-navy-light: #243e5e;
+  --tes-gold: #eaca21;
+  --tes-gold-dark: #c39843;
+
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: #ffffff;
+  color: var(--tes-navy);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ==========================================
+   LEFT VISUAL PANEL
+========================================== */
+
+.tes-login-visual {
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 45px 8%;
+  background: var(--tes-navy);
+  color: #ffffff;
+}
+
+.tes-login-photo {
+  position: absolute;
+  inset: 0;
+  background-image: url("https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=1800&q=85");
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.02);
+}
+
+.tes-login-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(12, 29, 49, 0.96) 0%,
+      rgba(12, 29, 49, 0.82) 55%,
+      rgba(12, 29, 49, 0.63) 100%
+    ),
+    linear-gradient(0deg, rgba(12, 29, 49, 0.55), transparent 65%);
+}
+
+.tes-login-brand,
+.tes-login-message,
+.tes-login-visual-copyright {
+  position: relative;
+  z-index: 2;
+}
+
+.tes-login-brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.tes-login-logo {
+  display: flex;
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(236, 193, 104, 0.45);
+  border-radius: 12px;
+  background: rgba(236, 193, 104, 0.12);
+  color: var(--tes-gold);
+}
+
+.tes-login-brand h1,
+.tes-login-mobile-brand h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.tes-login-brand span,
+.tes-login-mobile-brand span {
+  display: block;
+  margin-top: 4px;
+  color: var(--tes-gold);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+.tes-login-message {
+  width: 100%;
+  max-width: 570px;
+  margin: auto 0;
+  padding: 65px 0;
+}
+
+.tes-login-eyebrow,
+.tes-login-small-label {
+  display: block;
+  color: var(--tes-gold-dark);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.tes-login-eyebrow {
+  color: var(--tes-gold);
+}
+
+.tes-login-message h2 {
+  margin: 24px 0 20px;
+  color: #ffffff;
+  font-size: clamp(36px, 4.1vw, 57px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+}
+
+.tes-login-message > p {
+  max-width: 440px;
+  margin: 0;
+  color: #d1d9e3;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.tes-login-visual-footer {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-top: 45px;
+  color: #d6dce5;
+  font-size: 12px;
+}
+
+.tes-login-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--tes-gold);
+  box-shadow: 0 0 12px rgba(236, 193, 104, 0.5);
+}
+
+.tes-login-visual-copyright {
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  color: #aab5c3;
+  font-size: 11px;
+}
+
+/* ==========================================
+   RIGHT CONTENT PANEL
+========================================== */
+
+.tes-login-content {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 55px 9%;
+  background: #f8f9fb;
+}
+
+.tes-login-card {
+  width: 100%;
+  max-width: 430px;
+  padding: 42px;
+  border: 1px solid #edf0f3;
+  border-radius: 17px;
+  background: #ffffff;
+  box-shadow: 0 15px 55px rgba(23, 43, 69, 0.055);
+}
+
+.tes-login-card-heading {
+  margin-bottom: 34px;
+}
+
+.tes-login-small-label {
+  margin-bottom: 16px;
+}
+
+.tes-login-card-heading h2 {
+  margin: 0;
+  color: var(--tes-navy);
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.tes-login-card-heading p {
+  margin: 12px 0 0;
+  color: #7d8794;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* ==========================================
+   FORM
+========================================== */
+
+.tes-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+
+.tes-login-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 0;
+}
+
+.tes-login-field label {
+  color: #26384d;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.tes-login-input-wrap {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 53px;
+  align-items: center;
+  border: 1px solid #e2e6eb;
+  border-radius: 9px;
+  background: #ffffff;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.tes-login-input-wrap:focus-within {
+  border-color: var(--tes-gold-dark);
+  box-shadow: 0 0 0 3px rgba(236, 193, 104, 0.15);
+}
+
+.tes-login-input-wrap > svg {
+  position: absolute;
+  left: 15px;
+  flex-shrink: 0;
+  color: #9ba5b1;
+  pointer-events: none;
+}
+
+.tes-login-input-wrap input {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  padding: 0 45px;
+  border: 0;
+  border-radius: inherit;
+  outline: none;
+  background: transparent;
+  color: var(--tes-navy);
+  font-family: inherit;
+  font-size: 13px;
+}
+
+.tes-login-input-wrap input::placeholder {
+  color: #a6aeb8;
+}
+
+.tes-login-password-toggle {
+  position: absolute;
+  right: 13px;
+  display: flex;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: transparent;
+  color: #929ba7;
+  cursor: pointer;
+}
+
+.tes-login-password-toggle:hover {
+  color: var(--tes-navy);
+}
+
+/* ==========================================
+   ERROR MESSAGE
+========================================== */
+
+.tes-login-error {
+  padding: 12px 14px;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  background: #fff1f2;
+  color: #b42318;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   SIGN IN BUTTON
+========================================== */
+
+.tes-login-submit {
+  display: flex;
+  width: 100%;
+  height: 54px;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 5px;
+  border: 0;
+  border-radius: 9px;
+  background: var(--tes-navy);
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+
+.tes-login-submit:hover {
+  transform: translateY(-1px);
+  background: var(--tes-navy-light);
+}
+
+.tes-login-submit:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+  transform: none;
+}
+
+/* ==========================================
+   SECURITY AND FOOTER
+========================================== */
+
+.tes-login-security {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 30px;
+  padding-top: 23px;
+  border-top: 1px solid #edf0f3;
+}
+
+.tes-login-security svg {
+  flex-shrink: 0;
+  color: var(--tes-gold-dark);
+}
+
+.tes-login-security p {
+  margin: 0;
+  color: #8993a0;
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.tes-login-content-footer {
+  margin-top: 30px;
+  color: #a2aab4;
+  font-size: 10px;
+  text-align: center;
+}
+
+.tes-login-mobile-brand {
+  display: none;
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1050px) {
+  .tes-login {
+    grid-template-columns: 0.9fr 1.1fr;
+  }
+
+  .tes-login-content {
+    padding-right: 6%;
+    padding-left: 6%;
+  }
+
+  .tes-login-card {
+    padding: 34px 28px;
+  }
+
+  .tes-login-message h2 {
+    font-size: 39px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 760px) {
+  .tes-login {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    overflow: visible;
+  }
+
+  .tes-login-visual {
+    display: none;
+  }
+
+  .tes-login-content {
+    min-height: 100vh;
+    justify-content: center;
+    padding: 35px 22px;
+  }
+
+  .tes-login-mobile-brand {
+    display: flex;
+    width: 100%;
+    max-width: 430px;
+    align-items: center;
+    gap: 12px;
+    margin: 0 auto 35px;
+  }
+
+  .tes-login-card {
+    max-width: 430px;
+    padding: 30px 23px;
+    border-radius: 13px;
+  }
+
+  .tes-login-card-heading h2 {
+    font-size: 28px;
+  }
+
+  .tes-login-content-footer {
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 380px) {
+  .tes-login-content {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .tes-login-card {
+    padding: 25px 18px;
+  }
+}

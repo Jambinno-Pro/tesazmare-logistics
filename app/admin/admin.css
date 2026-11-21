@@ -1,0 +1,28 @@
+/* TESAZMARE ADMIN DASHBOARD */
+
+.admin-dashboard {
+  --admin-navy: #172b45;
+  --admin-gold: #eaca21;
+  --admin-gold-dark: #c39843;
+  --admin-background: #f5f7fa;
+}
+
+/* Smooth transitions */
+.admin-dashboard * {
+  transition-property: background-color, border-color, color, box-shadow;
+  transition-duration: 200ms;
+}
+
+/* Scrollbar */
+.admin-dashboard ::-webkit-scrollbar {
+  width: 6px;
+}
+
+.admin-dashboard ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 20px;
+}
+
+.admin-dashboard ::-webkit-scrollbar-track {
+  background: transparent;
+}

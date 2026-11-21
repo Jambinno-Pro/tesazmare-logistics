@@ -1,0 +1,515 @@
+/* =========================================
+   WHY CHOOSE SECTION
+========================================= */
+
+.why-choose-section {
+  position: relative;
+  width: 100%;
+  padding: 110px 0;
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.why-choose-container {
+  width: min(1240px, calc(100% - 48px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+  gap: 85px;
+}
+
+/* =========================================
+   IMAGE SIDE
+========================================= */
+
+.why-choose-image-wrapper {
+  position: relative;
+  min-width: 0;
+  padding: 0 25px 25px 0;
+}
+
+.why-choose-image {
+  position: relative;
+  width: 100%;
+  height: 590px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #dce5ef;
+  z-index: 1;
+}
+
+.why-choose-image img {
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.why-choose-image-wrapper:hover .why-choose-image img {
+  transform: scale(1.04);
+}
+
+.why-choose-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(2, 46, 93, 0.02) 45%,
+    rgba(2, 46, 93, 0.42) 100%
+  );
+}
+
+/* =========================================
+   IMAGE LABEL
+========================================= */
+
+.why-image-label {
+  position: absolute;
+  left: -25px;
+  bottom: 65px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  max-width: 330px;
+  padding: 20px 25px;
+  background: var(--background);
+  border-left: 4px solid var(--primary);
+  border-radius: 5px;
+  box-shadow: 0 12px 35px rgba(2, 46, 93, 0.12);
+}
+
+.why-image-label-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--navy);
+}
+
+.why-image-label > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.why-image-label strong {
+  color: var(--navy);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.why-image-label > div span {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* DECORATIVE SHAPE */
+
+.why-image-decoration {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 170px;
+  height: 170px;
+  border-right: 5px solid var(--primary);
+  border-bottom: 5px solid var(--primary);
+  border-radius: 0 0 8px 0;
+}
+
+/* =========================================
+   CONTENT SIDE
+========================================= */
+
+.why-choose-content {
+  width: 100%;
+  min-width: 0;
+}
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.why-choose-heading {
+  margin-bottom: 35px;
+}
+
+.why-choose-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  color: var(--primary-dark);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.why-choose-eyebrow-line {
+  display: block;
+  width: 32px;
+  height: 2px;
+  background: var(--primary);
+}
+
+.why-choose-heading h2 {
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(36px, 4vw, 49px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -1.8px;
+}
+
+.why-choose-heading h2 span {
+  color: var(--primary-dark);
+}
+
+.why-choose-heading > p {
+  max-width: 530px;
+  margin: 20px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* =========================================
+   BENEFITS GRID
+========================================= */
+
+.why-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 30px;
+  row-gap: 30px;
+}
+
+.why-benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  min-width: 0;
+}
+
+.why-benefit-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  background: var(--background);
+  color: var(--navy);
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.why-benefit:hover .why-benefit-icon {
+  background: var(--primary);
+  color: var(--navy);
+  transform: translateY(-3px);
+}
+
+/* =========================================
+   BENEFIT DETAILS
+========================================= */
+
+.why-benefit-content {
+  min-width: 0;
+}
+
+.why-benefit-number {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--primary-dark);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.why-benefit-content h3 {
+  margin: 0 0 9px;
+  color: var(--navy);
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.why-benefit-content p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* =========================================
+   CALL TO ACTION
+========================================= */
+
+.why-choose-cta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-top: 40px;
+}
+
+.why-choose-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 15px 23px;
+  border: 1px solid var(--primary);
+  border-radius: 5px;
+  background: var(--primary);
+  color: var(--navy);
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.why-choose-button:hover {
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.why-choose-button svg {
+  transition: transform 0.3s ease;
+}
+
+.why-choose-button:hover svg {
+  transform: translate(3px, -3px);
+}
+
+/* ASSURANCE */
+
+.why-choose-assurance {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.why-choose-assurance svg {
+  flex-shrink: 0;
+  color: var(--primary-dark);
+}
+
+/* =========================================
+   TABLET RESPONSIVENESS
+========================================= */
+
+@media (max-width: 1050px) {
+  .why-choose-section {
+    padding: 85px 0;
+  }
+
+  .why-choose-container {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 45px;
+  }
+
+  .why-choose-image {
+    height: 550px;
+  }
+
+  .why-benefits-grid {
+    column-gap: 20px;
+    row-gap: 25px;
+  }
+
+  .why-benefit {
+    gap: 11px;
+  }
+
+  .why-benefit-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .why-benefit-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+========================================= */
+
+@media (max-width: 850px) {
+  .why-choose-section {
+    padding: 75px 0;
+  }
+
+  .why-choose-container {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .why-choose-image-wrapper {
+    max-width: 650px;
+    width: calc(100% - 25px);
+    margin: 0 auto;
+  }
+
+  .why-choose-image {
+    height: 450px;
+  }
+
+  .why-image-label {
+    left: -20px;
+    bottom: 45px;
+  }
+
+  .why-choose-content {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .why-choose-heading h2 {
+    font-size: 42px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 550px) {
+  .why-choose-section {
+    padding: 65px 0;
+  }
+
+  .why-choose-container {
+    width: calc(100% - 36px);
+    gap: 45px;
+  }
+
+  .why-choose-image-wrapper {
+    width: calc(100% - 15px);
+    padding: 0 15px 15px 0;
+  }
+
+  .why-choose-image {
+    height: 340px;
+  }
+
+  .why-image-label {
+    left: -12px;
+    bottom: 35px;
+    max-width: 280px;
+    padding: 14px 16px;
+    gap: 11px;
+  }
+
+  .why-image-label-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .why-image-label strong {
+    font-size: 12px;
+  }
+
+  .why-image-label > div span {
+    font-size: 10px;
+  }
+
+  .why-image-decoration {
+    width: 110px;
+    height: 110px;
+    border-width: 4px;
+  }
+
+  .why-choose-heading {
+    margin-bottom: 30px;
+  }
+
+  .why-choose-heading h2 {
+    font-size: 35px;
+    letter-spacing: -1.2px;
+  }
+
+  .why-choose-heading > p {
+    font-size: 13px;
+  }
+
+  .why-benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .why-benefit {
+    gap: 15px;
+  }
+
+  .why-benefit-content h3 {
+    font-size: 14px;
+  }
+
+  .why-benefit-content p {
+    font-size: 12px;
+  }
+
+  .why-choose-cta {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 17px;
+    margin-top: 32px;
+  }
+}
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+  .why-choose-heading h2 {
+    font-size: 31px;
+  }
+
+  .why-choose-image {
+    height: 290px;
+  }
+
+  .why-image-label {
+    max-width: 250px;
+  }
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .why-choose-image img,
+  .why-benefit-icon,
+  .why-choose-button,
+  .why-choose-button svg {
+    transition: none;
+  }
+
+  .why-choose-image-wrapper:hover .why-choose-image img {
+    transform: none;
+  }
+
+  .why-benefit:hover .why-benefit-icon {
+    transform: none;
+  }
+}
